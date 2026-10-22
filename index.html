@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare</title>
     <meta name="title" content="Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare">
-    <meta name="description" content="Software Engineer with 6+ years building scalable distributed systems and APIs at Eli Lilly, Natixis, Novo Nordisk, and Instoried. Python, Go, FastAPI, Kubernetes. Purdue MS CS. Google Summer of Code '24. Top 3% on Toptal.">
-    <meta name="keywords" content="Pranay Das, Software Engineer, Backend Developer, Python, FastAPI, Go, FinTech, GSoC, Purdue, Distributed Systems, Microservices, Toptal">
+    <meta name="description" content="Software Engineer with 6+ years building scalable distributed systems and APIs at Eli Lilly, Natixis, Novo Nordisk, and Instoried. Python, FastAPI, Temporal, Kubernetes. Purdue MS CS. Google Summer of Code '24. Top 3% on Toptal.">
+    <meta name="keywords" content="Pranay Das, Software Engineer, Backend Developer, Python, FastAPI, Temporal, Kafka, FinTech, GSoC, Purdue, Distributed Systems, Microservices, Toptal">
     <meta name="author" content="Pranay Das">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -72,7 +72,7 @@
         "https://www.toptal.com/developers/resume/pranay-das"
       ],
       "description": "Software Engineer with 6+ years of experience building scalable distributed systems, microservices, and high-performance APIs across FinTech and pharma.",
-      "knowsAbout": ["Backend Development", "Python", "Go", "FastAPI", "Distributed Systems", "Microservices", "Kubernetes", "FinTech", "Agentic AI", "RAG"],
+      "knowsAbout": ["Backend Development", "Python", "FastAPI", "Temporal", "Distributed Systems", "Microservices", "Kubernetes", "FinTech", "Agentic AI", "RAG"],
       "award": ["Google Summer of Code 2024", "Toptal Top 3% Talent"]
     }
     </script>
@@ -107,8 +107,8 @@
                 <p class="hero-subtitle">
                     I build the distributed systems and high-throughput APIs that fintech and pharma companies
                     trust with regulated data — automating regulatory pipelines at <strong>Eli Lilly</strong>,
-                    scaling <strong>Instoried</strong> to 100K+ paid users as a founding engineer, and shipping
-                    KYC/AML platforms for <strong>Natixis</strong> and <strong>Novo Nordisk</strong>.
+                    scaling <strong>Instoried</strong> to 100K+ users as a founding engineer, and shipping
+                    KYC/AML and compliance platforms for <strong>Natixis</strong> and <strong>Novo Nordisk</strong>.
                 </p>
                 <div class="hero-meta">
                     <span class="meta-item">📍 San Francisco, CA</span>
@@ -142,10 +142,11 @@
                 <p class="about-text">
                     I'm a software engineer with 6+ years of experience building scalable distributed systems,
                     microservices, and high-performance APIs across FinTech and pharma — including Natixis, Novo
-                    Nordisk, Eli Lilly, and YC-backed startups like Instoried. I work primarily in Python, Go, Java,
-                    and Node.js, with hands-on experience in FastAPI, Gin, and cloud-native architectures across AWS,
-                    GCP, and Azure using Docker and Kubernetes. More recently I've been applying that background to
-                    agentic AI workflows, RAG architectures, LangChain, and vector databases. I'm an open-source
+                    Nordisk, Eli Lilly, and YC-backed startups like Instoried. I work primarily in Python, Java, and
+                    C/C++, with hands-on experience in FastAPI, Django, Temporal, Kafka, and cloud-native architectures
+                    on AWS and GCP using Docker and Kubernetes. More recently I've been applying that background to
+                    agentic AI systems — verifying agent outputs, routing cases for human review, and checking
+                    citations against retrieved evidence. I'm an open-source
                     contributor with a strong systems and security mindset, and I hold a B.Tech in Computer Science
                     from Sambalpur University and an MS in Computer Science from Purdue University.
                 </p>
@@ -164,11 +165,11 @@
                     </div>
                     <div class="skill-item">
                         <h3>Backend &amp; APIs</h3>
-                        <p>Python, Go, FastAPI, Gin, Flask, Django, REST, gRPC, GraphQL</p>
+                        <p>Python, FastAPI, Flask, Django, REST, gRPC, GraphQL, OpenAPI</p>
                     </div>
                     <div class="skill-item">
                         <h3>Cloud &amp; Infra</h3>
-                        <p>AWS, GCP, Docker, Kubernetes, Terraform, Argo CD, CI/CD</p>
+                        <p>AWS, GCP, Docker, Kubernetes, Terraform, Jenkins, CI/CD</p>
                     </div>
                 </div>
             </div>
@@ -189,10 +190,10 @@
                             <span class="timeline-date">Oct 2024 — Present · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Automated Adverse Event and Product Complaint data flow from Lilly Safety Link into Lilly Safety System and Veeva QMS using Python, FastAPI, Temporal, and AWS, including the XML-to-JSON transform layer for regulatory submissions.</li>
-                            <li>Built a Dose Order Management System (FastAPI, Temporal, Redis, PostgreSQL, React) for clinical site users and manufacturers.</li>
-                            <li>Designed agentic RAG workflows (LangChain + vector databases) to help lawyers and analysts summarize legal documents.</li>
-                            <li>Ran production deployments on Kubernetes/Argo CD and built an ingestion pipeline processing 5–10 TB of unstructured support data.</li>
+                            <li>Developed a concurrent slot reservation system using idempotent requests and version-based optimistic concurrency control, preventing double bookings of the same time slot for clinical operators.</li>
+                            <li>Implemented correlation IDs to trace events across services and added role- and group-based access controls using Python and FastAPI.</li>
+                            <li>Developed a Python/FastAPI verification and routing service within an agentic adverse event processing system, validating classified cases, routing mismatches for human review, and sending verified cases through Temporal workflows to MuleSoft/Veeva — enabling ~70% of cases to bypass manual classification review.</li>
+                            <li>Built a component to verify agent-generated citations against retrieved evidence from a collection of about 50K labeled documents.</li>
                         </ul>
                     </div>
                 </article>
@@ -204,8 +205,10 @@
                             <span class="timeline-date">May 2024 — Aug 2024 · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Built and published the <a href="https://pypi.org/project/scorecode/" target="_blank" rel="noopener noreferrer">scorecode</a> PyPI package to fetch and store OpenSSF Scorecard data.</li>
-                            <li>Shipped Django mixin models integrating Scorecard data into Scancode.io and PurlDB, plus a pipeline enhancing CycloneDX SBOM exports.</li>
+                            <li>Built and published <a href="https://pypi.org/project/scorecode/" target="_blank" rel="noopener noreferrer">scorecode</a>, a Python package on PyPI that retrieves software supply-chain security metrics from the OpenSSF Scorecard API.</li>
+                            <li>Developed reusable Django models and a ScanCode.io integration to store Scorecard results and include them in CycloneDX SBOM exports.</li>
+                            <li>Collaborated with open-source maintainers through iterative code reviews, refining API design, class naming conventions, documentation, and code quality to meet project contribution standards.</li>
+                            <li>Implemented automated pytest suites covering API response validation, data integrity, and edge cases across public, private, and nonexistent repositories.</li>
                         </ul>
                     </div>
                 </article>
@@ -217,9 +220,13 @@
                             <span class="timeline-date">Aug 2019 — May 2023 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Founding engineer building the core SaaS platform, payment systems, and developer SDKs (Python, Go, Node.js) — scaled to 100K+ paid users across Series A and B.</li>
-                            <li>Built event-driven systems on Kafka/SNS/SSE and microservices on Docker/Kubernetes/Redis for high-load production workloads.</li>
-                            <li>Ran infrastructure on Terraform, AWS EC2/S3, and Jenkins, cutting hosting costs by 50%.</li>
+                            <li>Built the backend platform from scratch using Python, FastAPI, and PostgreSQL, developing REST APIs and recommendation engine integrations for a SaaS product that scaled to 100K+ users.</li>
+                            <li>Led a team of 5–6 backend, frontend, and DevOps engineers, taking part in technical design, code reviews, hiring, and mentoring alongside the CTO.</li>
+                            <li>Built a centralized OAuth 2.0 authorization service and developer portal that allowed customers to use the recommendation APIs directly, extending access beyond the web application.</li>
+                            <li>Developed a Git-like text versioning system using snapshots and incremental deltas, reducing database storage overhead, read/write latency, and payload sizes by transmitting only modified text chunks.</li>
+                            <li>Used Redis caching with content-based keys, TTLs, and LFU eviction to reuse recommendation results and reduce repeated processing.</li>
+                            <li>Developed an incremental ETL pipeline using checkpoint-based PostgreSQL queries to synchronize user onboarding and campaign data with a marketing analytics dashboard, reducing load on the primary database and enabling near-real-time sales insights.</li>
+                            <li>Configured Kubernetes horizontal pod autoscaling and load balancing to handle campaign-driven traffic spikes, alongside Jenkins CI/CD pipelines and pytest-based automated testing.</li>
                         </ul>
                     </div>
                 </article>
@@ -231,8 +238,8 @@
                             <span class="timeline-date">Jan 2019 — May 2019 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Built data-sync middleware in Spring Boot integrating Shopify, HubSpot, Snowflake, and NetSuite.</li>
-                            <li>Engineered a Change Data Capture pipeline over WAL/binlog streams for near real-time incremental sync, with retry/DLQ-based fault tolerance.</li>
+                            <li>Designed and developed a bidirectional data synchronization platform using a canonical data model to integrate Shopify, HubSpot, NetSuite, Snowflake, and SQL databases, enabling seamless CRM integration for 50+ onboarded clients.</li>
+                            <li>Implemented a hybrid synchronization pipeline using webhooks, WAL-based CDC, and offset-based polling workers, achieving near-real-time data propagation with eventual consistency across connected systems.</li>
                         </ul>
                     </div>
                 </article>
@@ -244,8 +251,9 @@
                             <span class="timeline-date">Jun 2017 — Dec 2018 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Built a data-integration platform connecting REST APIs and 20+ SQL/NoSQL sources via a NoSQL-to-relational mapping layer.</li>
-                            <li>Architected connector orchestration, schema mapping, and sync as Python/Django and Java microservices.</li>
+                            <li>Developed 5 REST API connectors for external applications and databases as part of a data integration platform supporting different SQL/NoSQL data sources, enabling configurable cross-source data migration.</li>
+                            <li>Designed a unified data schema that eliminated source-to-destination-specific transformation logic, enabling reusable data mappings and simplifying integration across heterogeneous systems.</li>
+                            <li>Built Java-based Azure and JSON connector plugins for Yellowfin BI, expanding data connectivity for business intelligence reporting and visualization.</li>
                         </ul>
                     </div>
                 </article>
@@ -262,7 +270,7 @@
                 <div class="project">
                     <div class="project-tag">Open Source · GSoC '24</div>
                     <h3>scorecode</h3>
-                    <p>PyPI package that fetches and stores OpenSSF Scorecard data, integrated into Scancode.io and PurlDB to enrich CycloneDX SBOM exports.</p>
+                    <p>PyPI package that retrieves software supply-chain security metrics from the OpenSSF Scorecard API, with Django models and a ScanCode.io integration that include Scorecard results in CycloneDX SBOM exports.</p>
                     <div class="project-links">
                         <a href="https://github.com/aboutcode-org/scorecode" target="_blank" rel="noopener noreferrer">GitHub</a>
                         <a href="https://pypi.org/project/scorecode/" target="_blank" rel="noopener noreferrer">PyPI</a>
@@ -271,13 +279,13 @@
                 <div class="project">
                     <div class="project-tag">Freelance · Natixis Investments</div>
                     <h3>KYC Portal</h3>
-                    <p>Microservices-based KYC/AML platform (FastAPI + React) with JWT auth, RBAC, and Pydantic validation. Integrated Orbis, World-Check, and Moody's sanctions screening; ML-assisted checks cut manual review by 70%.</p>
+                    <p>KYC/AML screening platform (Python, FastAPI, PostgreSQL) that replaced spreadsheet workflows and cut screening and review turnaround from about a week to 8 hours. A Kafka pipeline pulls data from Moody's, Refinitiv World-Check, and internal banking APIs in parallel, with real-time progress over Server-Sent Events and SSO-based access.</p>
                     <p class="placeholder-note">Proprietary client project — no public repository</p>
                 </div>
                 <div class="project">
                     <div class="project-tag">Freelance · Novo Nordisk</div>
                     <h3>Compliance Checker</h3>
-                    <p>Event-driven medical-document compliance automation system in Go (Gin), using S3-triggered Lambda workers with pooled goroutines for high-throughput validation, instrumented with Prometheus metrics.</p>
+                    <p>Python/FastAPI backend that extracts information from clinical PDFs, checks it against client-defined compliance rules, flags violations, and applies corrections. Replaced an EC2 service with parallel AWS Lambda functions that split 400-page documents into 20–30 page tasks (6–10 s each), with DynamoDB aggregation, automatic retries, and dead-letter queues.</p>
                     <p class="placeholder-note">Proprietary client project — no public repository</p>
                 </div>
             </div>
@@ -292,23 +300,23 @@
             <div class="skills-full-grid">
                 <div class="skill-block">
                     <h3>Languages</h3>
-                    <p>Python, Go, Java, C/C++, SQL</p>
+                    <p>Python, C/C++, Java</p>
                 </div>
                 <div class="skill-block">
                     <h3>Frameworks &amp; APIs</h3>
-                    <p>FastAPI, Flask, Django, Gin, Node.js, Next.js, REST, gRPC, GraphQL, Temporal</p>
+                    <p>FastAPI, Flask, Django, Node.js, REST APIs, gRPC, GraphQL, OpenAPI, Swagger, pytest</p>
                 </div>
                 <div class="skill-block">
                     <h3>Cloud &amp; DevOps</h3>
-                    <p>AWS, GCP, Docker, Kubernetes, Terraform, Jenkins, Nginx, Helm, CI/CD</p>
+                    <p>AWS, S3, Lambda, Docker, Kubernetes, Git, CI/CD, Terraform, Jenkins, Google Cloud Platform, BigQuery</p>
                 </div>
                 <div class="skill-block">
                     <h3>Databases</h3>
-                    <p>PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, Cassandra, Elasticsearch</p>
+                    <p>PostgreSQL, Supabase, MySQL, MongoDB, Redis, Cassandra, Elasticsearch, DynamoDB</p>
                 </div>
                 <div class="skill-block">
                     <h3>Architecture</h3>
-                    <p>Microservices, Apache Kafka, Celery, event-driven systems, agentic AI &amp; RAG</p>
+                    <p>Temporal, Apache Kafka, Modular Monolith, Microservices</p>
                 </div>
                 <div class="skill-block">
                     <h3>Education</h3>
