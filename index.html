@@ -187,10 +187,10 @@
                             <span class="timeline-date">Oct 2024 — Present · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Built a slot reservation system for dose ordering by 10K+ clinical technicians, using idempotency and optimistic concurrency control to prevent double bookings when technicians selected the same slot for drugs and isotopes.</li>
-                            <li>Built a patient context tool for an adverse event processing system, retrieving live patient medical history and removing PII before providing it to the classification model.</li>
-                            <li>Developed a verification component to check the model's citations and explanations against retrieved historical cases, ensuring the evidence supports why those cases are relevant.</li>
-                            <li>Built custom Python transformer classes to convert canonical case data into MuleSoft and Veeva formats for downstream processing.</li>
+                            <li>Designed a slot reservation service for radiopharmaceutical dose ordering used by 10K+ clinical technicians, using idempotent requests and optimistic concurrency control to lock each slot on the first confirmed booking, preventing race-condition double bookings by design.</li>
+                            <li>Built a patient context service for adverse event classification that retrieves live medical history and redacts PII before model input, serving context in ~3 ms.</li>
+                            <li>Developed a citation verification component that checks model explanations against retrieved historical cases, contributing to ~70% of adverse event cases bypassing manual classification review.</li>
+                            <li>Built Python transformers mapping canonical case data to MuleSoft and Veeva formats, and reviewed teammates' PRs for the downstream pipeline stages that run after an authorized reviewer approves a submitted case change.</li>
                         </ul>
                     </div>
                 </article>
