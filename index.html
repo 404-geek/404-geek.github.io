@@ -220,8 +220,8 @@
                             <li>Led a team of 5–6 backend, frontend, and DevOps engineers in an agile, feature-ownership model; hired ~5 engineers and drove technical design, code reviews, and mentoring alongside the CTO.</li>
                             <li>Built the backend from scratch (Python, FastAPI, PostgreSQL) for an AI writing assistant recommending tone, emotion, and concision improvements, scaling to 100K+ registered users.</li>
                             <li>Built an OAuth 2.0 authorization service and developer portal that let ~20 B2B customers integrate the recommendation APIs directly into their own products.</li>
-                            <li>Designed a Git-like text versioning system using snapshots and incremental deltas, shrinking save payloads from up to ~10 MB to a few KB and letting any lost chunk be restored from the last snapshot.</li>
-                            <li>Resolved serving failures under 3× campaign traffic spikes by adding Redis caching (content-hashed keys, TTL, LFU eviction) with sub-millisecond cached responses, plus Kubernetes horizontal pod autoscaling.</li>
+                            <li>Designed a Git-like text versioning system using snapshots and incremental deltas, sending only changed chunks instead of the full document (up to ~10 MB) on every save, cutting payloads to a few KB and letting any lost chunk be restored from the last snapshot.</li>
+                            <li>Resolved serving failures under 3× campaign traffic spikes by adding Redis caching (content-hashed keys, TTL, LFU eviction), cutting repeat recommendation latency from 1–2 s to ~1 ms, plus Kubernetes horizontal pod autoscaling.</li>
                             <li>Built a real-time sales dashboard from scratch, fed by an incremental, checkpoint-based ETL pipeline that synced onboarding and campaign data without loading the primary database.</li>
                         </ul>
                     </div>
