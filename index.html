@@ -145,7 +145,7 @@
                     C/C++, with hands-on experience in FastAPI, Django, Temporal, Kafka, and cloud-native architectures
                     on AWS and GCP using Docker and Kubernetes. I'm an open-source
                     contributor with a strong systems and security mindset, and I hold a Bachelor's in Computer Science
-                    from Sambalpur University and an MS in Computer Science from Purdue University.
+                    from Sambalpur University and an MS in Computer Science (Cyber Security) from Purdue University.
                 </p>
                 <div class="expertise-list">
                     <span class="badge">Software Engineering</span>
@@ -187,10 +187,10 @@
                             <span class="timeline-date">Aug 2025 — Present · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Designed a slot reservation service for radiopharmaceutical dose ordering used by 10K+ clinical technicians, using idempotent requests and optimistic concurrency control to lock each slot on the first confirmed booking, preventing race-condition double bookings by design.</li>
-                            <li>Built a patient context service for adverse event classification that retrieves live medical history and redacts PII before model input, serving context in ~3 ms.</li>
-                            <li>Developed a citation verification component that checks model explanations against retrieved historical cases, contributing to ~70% of adverse event cases bypassing manual classification review.</li>
-                            <li>Built Python transformers mapping canonical case data to MuleSoft and Veeva formats, and reviewed teammates' PRs for the downstream pipeline stages that run after an authorized reviewer approves a submitted case change.</li>
+                            <li>Designed a slot reservation service for radiopharmaceutical dose ordering used by 10K+ clinical technicians, using idempotent requests and optimistic concurrency control to eliminate double bookings across ~5K bookings/day.</li>
+                            <li>Built a patient context service for adverse event classification that retrieves live medical history and redacts PII before model input, serving context in ~3 ms across 8K+ cases/day.</li>
+                            <li>Developed a citation verification component that checks model explanations against retrieved historical cases, helping ~70% of adverse event cases (~5.6K/day) bypass manual review.</li>
+                            <li>Built Python transformers mapping 8K+ cases/day to MuleSoft and Veeva formats; reviewed ~20 PRs for downstream stages.</li>
                         </ul>
                     </div>
                 </article>
@@ -202,9 +202,9 @@
                             <span class="timeline-date">May 2024 — Aug 2024 · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Built and published <a href="https://pypi.org/project/scorecode/" target="_blank" rel="noopener noreferrer">scorecode</a>, a Python package that retrieves OpenSSF Scorecard supply-chain security metrics; adopted as a ScanCode.io dependency, with ~2K monthly PyPI downloads.</li>
-                            <li>Integrated Scorecard results into ScanCode.io through reusable Django models and CycloneDX SBOM export support, with pytest coverage for public and private repositories.</li>
-                            <li>Collaborated with open-source maintainers through iterative code reviews, refining API design, class naming conventions, documentation, and code quality to meet project contribution standards.</li>
+                            <li>Built and published <a href="https://pypi.org/project/scorecode/" target="_blank" rel="noopener noreferrer">scorecode</a>, a Python package that retrieves OpenSSF Scorecard supply-chain security metrics; adopted as a ScanCode.io dependency with ~2K monthly PyPI downloads.</li>
+                            <li>Integrated Scorecard results into ScanCode.io through reusable Django models, adding supply-chain security scores to its CycloneDX SBOM exports, with pytest coverage for public and private repositories.</li>
+                            <li>Iterated with maintainers through code reviews, refining API design, naming, documentation, and code quality.</li>
                         </ul>
                     </div>
                 </article>
@@ -216,12 +216,12 @@
                             <span class="timeline-date">Aug 2019 — May 2023 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Led a team of 5–6 backend, frontend, and DevOps engineers in an agile, feature-ownership model; hired ~5 engineers and drove technical design, code reviews, and mentoring alongside the CTO.</li>
-                            <li>Built the backend from scratch (Python, FastAPI, PostgreSQL) for an AI writing assistant recommending tone, emotion, and concision improvements, scaling to 100K+ registered users.</li>
-                            <li>Built an OAuth 2.0 authorization service and developer portal that let ~20 B2B customers integrate the recommendation APIs directly into their own products.</li>
-                            <li>Designed a Git-like text versioning system using snapshots and incremental deltas, sending only changed chunks instead of the full document (up to ~10 MB) on every save, cutting payloads to a few KB and letting any lost chunk be restored from the last snapshot.</li>
-                            <li>Resolved serving failures under 3× campaign traffic spikes by adding Redis caching (content-hashed keys, TTL, LFU eviction), cutting repeat recommendation latency from 1–2 s to ~1 ms, plus Kubernetes horizontal pod autoscaling.</li>
-                            <li>Built a real-time sales dashboard from scratch, fed by an incremental, checkpoint-based ETL pipeline that synced onboarding and campaign data without loading the primary database.</li>
+                            <li>Led a team of 5–6 engineers delivering DevOps automation, monitoring, and authentication/authorization features; hired ~5 engineers and drove technical design, code reviews, and mentoring alongside the CTO.</li>
+                            <li>Built the backend from scratch (Python, FastAPI, PostgreSQL) for an AI writing assistant recommending tone, emotion, and concision improvements, scaling to 100K+ registered users and 30K+ daily actives.</li>
+                            <li>Built an OAuth 2.0 service and developer portal letting ~20 B2B customers embed our recommendation APIs, driving ~20% of revenue.</li>
+                            <li>Designed a Git-like text versioning system using snapshots and incremental deltas that sends only changed chunks on every save, cutting payloads from up to ~10 MB to a few KB and letting any lost chunk be restored from the last snapshot.</li>
+                            <li>Resolved serving failures under 3× campaign traffic spikes by adding Redis caching (content-hashed keys, TTL, LFU eviction) and Kubernetes horizontal pod autoscaling, cutting repeat recommendation latency from 1–2 s to ~1 ms.</li>
+                            <li>Built a real-time sales dashboard from scratch, fed by an incremental, checkpoint-based ETL pipeline that synced onboarding and campaign data without adding load to the primary database.</li>
                         </ul>
                     </div>
                 </article>
@@ -233,7 +233,7 @@
                             <span class="timeline-date">Jan 2019 — May 2019 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Designed a bidirectional sync backend connecting Shopify, HubSpot, NetSuite, Snowflake, and SQL databases to the CRM through a canonical object model, so each source needed only its own mapper rather than point-to-point logic, supporting 50+ onboarded clients.</li>
+                            <li>Designed a bidirectional sync backend connecting Shopify, HubSpot, NetSuite, Snowflake, and SQL databases to the CRM through a canonical object model, so each source needed only its own mapper, supporting 50+ onboarded clients.</li>
                             <li>Matched change capture to each source type (webhooks for SaaS platforms, WAL-based CDC for SQL databases, and offset-based polling workers for legacy systems), propagating changes in both directions in near real time with eventual consistency.</li>
                         </ul>
                     </div>
@@ -247,8 +247,8 @@
                         </div>
                         <ul class="timeline-list">
                             <li>Built 5 REST API connectors, mostly sources such as QuickBooks and Zendesk, for an early-stage data migration platform that moved user-authorized data, limited to granted scopes, into destinations such as PostgreSQL.</li>
-                            <li>Contributed to a global data schema that let the middleware read heterogeneous sources in a unified way, replacing source-to-destination-specific transformation logic.</li>
-                            <li>Built Java-based Azure and JSON data-source plugins for Yellowfin BI, letting users pull data from these sources and visualize it directly in the BI tool.</li>
+                            <li>Contributed to a global data schema letting middleware read all sources uniformly, replacing per-pair transformation logic.</li>
+                            <li>Built Java-based Azure and JSON data-source plugins, letting Yellowfin BI users visualize that data directly.</li>
                         </ul>
                     </div>
                 </article>
@@ -315,7 +315,7 @@
                 </div>
                 <div class="skill-block">
                     <h3>Education</h3>
-                    <p>MS Computer Science — Purdue University (2023–2025)<br>Bachelor's, Computer Science — Sambalpur University (2013–2017)</p>
+                    <p>MS Computer Science (Cyber Security) — Purdue University (2023–2025)<br>Bachelor's, Computer Science — Sambalpur University (2013–2017)</p>
                 </div>
             </div>
         </div>
