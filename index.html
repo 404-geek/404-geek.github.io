@@ -7,8 +7,8 @@
     <!-- Primary Meta Tags -->
     <title>Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare</title>
     <meta name="title" content="Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare">
-    <meta name="description" content="Software Engineer with 7+ years building scalable distributed systems and APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Python, FastAPI, Temporal, Kubernetes. Purdue MS CS. Google Summer of Code '24. Top 3% on Toptal.">
-    <meta name="keywords" content="Pranay Das, Software Engineer, Backend Developer, Python, FastAPI, Temporal, Kafka, FinTech, GSoC, Purdue, Distributed Systems, Microservices, Toptal">
+    <meta name="description" content="Software Engineer with 7+ years building scalable distributed systems, LLM guardrails, and high-throughput APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Python, FastAPI, Temporal, Kubernetes. Purdue MS CS. Google Summer of Code '24. Top 3% on Toptal.">
+    <meta name="keywords" content="Pranay Das, Software Engineer, Backend Developer, LLM, Python, FastAPI, Temporal, Kafka, FinTech, GSoC, Purdue, Distributed Systems, Microservices, Toptal">
     <meta name="author" content="Pranay Das">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://404-geek.github.io/">
     <meta property="og:title" content="Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare">
-    <meta property="og:description" content="Software Engineer with 7+ years building scalable distributed systems and APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Purdue MS CS. GSoC '24. Top 3% on Toptal.">
+    <meta property="og:description" content="Software Engineer with 7+ years building scalable distributed systems, LLM guardrails, and high-throughput APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Purdue MS CS. GSoC '24. Top 3% on Toptal.">
     <meta property="og:site_name" content="Pranay Das Portfolio">
     <meta property="og:locale" content="en_US">
 
@@ -25,7 +25,7 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://404-geek.github.io/">
     <meta property="twitter:title" content="Pranay Das | Software Engineer — Distributed Systems, FinTech & Healthcare">
-    <meta property="twitter:description" content="Software Engineer with 7+ years building scalable distributed systems and APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Purdue MS CS. GSoC '24. Top 3% on Toptal.">
+    <meta property="twitter:description" content="Software Engineer with 7+ years building scalable distributed systems, LLM guardrails, and high-throughput APIs at Eli Lilly and Instoried, plus freelance work for Natixis and Novo Nordisk. Purdue MS CS. GSoC '24. Top 3% on Toptal.">
 
     <!-- Additional SEO -->
     <meta name="geo.region" content="US-CA">
@@ -187,9 +187,9 @@
                             <span class="timeline-date">Aug 2025 — Present · Remote</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Designed a slot reservation service for radiopharmaceutical dose ordering used by 10K+ clinical technicians, using idempotent requests and optimistic concurrency control to eliminate double bookings across ~5K bookings/day.</li>
+                            <li>Proactively wrote the design doc and built a slot reservation service for radiopharmaceutical dose delivery that absorbs a 3K+ requests/sec morning rush as 10K+ clinical technicians race for early slots; idempotency keys drop duplicate retries and optimistic concurrency control eliminates double bookings.</li>
                             <li>Built a patient context service for adverse event classification that retrieves live medical history and redacts PII before model input, serving context in ~3 ms across 8K+ cases/day.</li>
-                            <li>Developed a citation verification component that checks model explanations against retrieved historical cases, helping ~70% of adverse event cases (~5.6K/day) bypass manual review.</li>
+                            <li>Built a citation verification layer for LLM-based adverse event classification that deterministically checks each citation exists and is permitted in model context, then uses a small model to confirm it supports the claim, letting ~70% of cases (~5.6K/day) bypass manual review.</li>
                             <li>Built Python transformers mapping 8K+ cases/day to MuleSoft and Veeva formats; reviewed ~20 PRs for downstream stages.</li>
                         </ul>
                     </div>
@@ -198,7 +198,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Open Source Software Developer <span class="at">@ Google Summer of Code</span></h3>
+                            <h3>Software Engineer <span class="at">@ Google Summer of Code</span></h3>
                             <span class="timeline-date">May 2024 — Aug 2024 · Remote</span>
                         </div>
                         <ul class="timeline-list">
@@ -212,7 +212,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Software Developer <span class="at">@ Instoried</span> <span class="tag">Founding Engineer</span></h3>
+                            <h3>Software Engineer <span class="at">@ Instoried</span> <span class="tag">Founding Engineer</span></h3>
                             <span class="timeline-date">Aug 2019 — May 2023 · Bengaluru, India</span>
                         </div>
                         <ul class="timeline-list">
@@ -247,7 +247,6 @@
                         </div>
                         <ul class="timeline-list">
                             <li>Built 5 REST API connectors, mostly sources such as QuickBooks and Zendesk, for an early-stage data migration platform that moved user-authorized data, limited to granted scopes, into destinations such as PostgreSQL.</li>
-                            <li>Contributed to a global data schema letting middleware read all sources uniformly, replacing per-pair transformation logic.</li>
                             <li>Built Java-based Azure and JSON data-source plugins, letting Yellowfin BI users visualize that data directly.</li>
                         </ul>
                     </div>
@@ -280,7 +279,7 @@
                 <div class="project">
                     <div class="project-tag">Freelance · Novo Nordisk</div>
                     <h3>Compliance Checker</h3>
-                    <p>Python/FastAPI backend that extracts information from clinical PDFs, checks it against client-defined compliance rules, flags violations, and applies corrections. Replaced an EC2 service with parallel AWS Lambda functions that split 400-page documents into 20–30 page tasks (6–10 s each), with DynamoDB aggregation, automatic retries, and dead-letter queues.</p>
+                    <p>Python/FastAPI backend that extracts information from clinical PDFs, checks it against client-defined compliance rules, flags violations, and applies corrections. Replaced two always-on 32 GB EC2 instances with on-demand parallel AWS Lambda functions that split 400-page documents into 20–30 page tasks (6–10 s each), cutting compute cost by ~80%, with DynamoDB aggregation, automatic retries, and dead-letter queues.</p>
                     <p class="placeholder-note">Proprietary client project — no public repository</p>
                 </div>
             </div>
@@ -295,23 +294,27 @@
             <div class="skills-full-grid">
                 <div class="skill-block">
                     <h3>Languages</h3>
-                    <p>Python, C/C++, Java</p>
+                    <p>Python, Java, C/C++, SQL, Bash</p>
+                </div>
+                <div class="skill-block">
+                    <h3>AI/ML</h3>
+                    <p>LLMs, RAG, Prompt Engineering, LLM Evaluation, Claude Code, Copilot</p>
                 </div>
                 <div class="skill-block">
                     <h3>Frameworks &amp; APIs</h3>
-                    <p>FastAPI, Flask, Django, Node.js, REST APIs, gRPC, GraphQL, OpenAPI, Swagger, pytest</p>
+                    <p>FastAPI, Flask, Django, REST APIs, gRPC, GraphQL, OpenAPI, pytest</p>
                 </div>
                 <div class="skill-block">
                     <h3>Cloud &amp; DevOps</h3>
-                    <p>AWS, S3, Lambda, Docker, Kubernetes, Git, CI/CD, GitHub Actions, Terraform, Jenkins, Google Cloud Platform, BigQuery</p>
+                    <p>AWS (S3, Lambda), Google Cloud Platform, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, CI/CD</p>
                 </div>
                 <div class="skill-block">
                     <h3>Databases</h3>
-                    <p>PostgreSQL, Supabase, MySQL, MongoDB, Redis, Cassandra, Elasticsearch, DynamoDB</p>
+                    <p>PostgreSQL, MySQL, MongoDB, Redis, Cassandra, Elasticsearch, DynamoDB</p>
                 </div>
                 <div class="skill-block">
-                    <h3>Architecture</h3>
-                    <p>Temporal, Apache Kafka, Modular Monolith, Microservices</p>
+                    <h3>Distributed Systems &amp; Observability</h3>
+                    <p>Apache Kafka, Temporal, Microservices, Prometheus, Grafana</p>
                 </div>
                 <div class="skill-block">
                     <h3>Education</h3>
